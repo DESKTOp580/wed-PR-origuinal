@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Página de productos: Catálogo completo con filtros y carrito -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | P&R Multimedia</title>
+    <meta name="description" content="Catálogo de accesorios tecnológicos de P&R Multimedia con atención por WhatsApp.">
+    <link rel="stylesheet" href="../styl/style.css">
+</head>
+<body>
+    <!-- HEADER: Navegación y carrito -->
+    <header>
+        <div class="container header-grid">
+            <a href="../index.html" class="logo logo-link">P&amp;R Multimedia</a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../productos/productos.html">Productos</a></li>
+                    <li><a href="../index.html#servicios">Servicios</a></li>
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button id="cart-btn" class="cart-button cart-button-header" type="button" aria-label="Ver resumen del carrito">
+                <span class="cart-icon">🛒</span>
+                <span id="cart-count" class="cart-badge" aria-hidden="true">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN: Contenido principal de la página -->
+    <main>
+        <!-- PRODUCTOS: Grid de productos con filtros -->
+        <section id="productos" class="section">
+            <h1 class="section-title">Nuestros Productos</h1>
+            <p class="section-copy">Catálogo de accesorios tecnológicos con precios referenciales y pedido directo por WhatsApp.</p>
+
+            <!-- FILTROS: Barra de búsqueda y selección de categoría -->
+            <div class="filter-bar">
+                <input id="filter-input" class="filter-input" type="search" placeholder="Buscar producto...">
+                <select id="filter-category" class="filter-select" aria-label="Filtrar por categoría">
+                    <option value="">Todas</option>
+                    <option value="cable">Cables</option>
+                    <option value="fuente">Fuentes</option>
+                    <option value="almacenamiento">Almacenamiento</option>
+                    <option value="adaptador">Adaptadores</option>
+                </select>
+                <button id="filter-reset" class="filter-reset" type="button" aria-label="Reiniciar filtro">Reiniciar</button>
+            </div>
+
+            <!-- GRID DE PRODUCTOS: Lista de productos con botones de agregar al carrito -->
+            <div class="products-grid products-container">
+                <article class="product-card" data-category="cable" data-name="Cable USB para impresora" data-price="12.99">
+                    <img src="../imaguines/img-productos/cables/Cable-de-Impresora-USB.webp" alt="Cable USB para impresora">
+                    <h3 class="product-title">Cable USB para impresora</h3>
+                    <p class="price">S/. 12.99</p>
+                    <p class="description">Cable USB 2.0 para impresoras y periféricos, ideal para uso diario.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable HDMI 2.0" data-price="24.90">
+                    <img src="../imaguines/img-productos/cables/CABLE-hdmi.jpg" alt="Cable HDMI 2.0">
+                    <h3 class="product-title">Cable HDMI 2.0</h3>
+                    <p class="price">S/. 24.90</p>
+                    <p class="description">Cable para video y audio en alta definición, compatible con TV, monitor y laptop.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable Tipo 8" data-price="18.50">
+                    <img src="../imaguines/img-productos/cables/CABLTIPO8.jpg" alt="Cable Tipo 8 de poder">
+                    <h3 class="product-title">Cable Tipo 8</h3>
+                    <p class="price">S/. 18.50</p>
+                    <p class="description">Cable de alimentación para equipos compatibles, resistente y fácil de instalar.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable VGA" data-price="19.90">
+                    <img src="../imaguines/img-productos/cables/CABLE-VGA.webp" alt="Cable VGA">
+                    <h3 class="product-title">Cable VGA</h3>
+                    <p class="price">S/. 19.90</p>
+                    <p class="description">Conecta equipos y monitores con entrada VGA para entornos de oficina y soporte técnico.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Extensión USB" data-price="16.90">
+                    <img src="../imaguines/img-productos/cables/ENTENCION-USB.jpg" alt="Extensión USB">
+                    <h3 class="product-title">Extensión USB</h3>
+                    <p class="price">S/. 16.90</p>
+                    <p class="description">Extensión práctica para ampliar el alcance de tus puertos USB sin perder estabilidad.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable de red" data-price="9.90">
+                    <img src="../imaguines/img-productos/cables/CABLE-DE-RED.png" alt="Cable de red">
+                    <h3 class="product-title">Cable de red</h3>
+                    <p class="price">S/. 9.90</p>
+                    <p class="description">Cable Ethernet para instalación de redes domésticas o empresariales.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable tipo trébol" data-price="22.90">
+                    <img src="../imaguines/img-productos/cables/CABLETIPO-TREBOL.jpg" alt="Cable tipo trébol">
+                    <h3 class="product-title">Cable tipo trébol</h3>
+                    <p class="price">S/. 22.90</p>
+                    <p class="description">Cable de poder para fuentes y cargadores compatibles con entrada tipo trébol.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="cable" data-name="Cable de poder para PC" data-price="21.90">
+                    <img src="../imaguines/img-productos/cables/CABLEDEPODER-PC.jpg" alt="Cable de poder para PC">
+                    <h3 class="product-title">Cable de poder para PC</h3>
+                    <p class="price">S/. 21.90</p>
+                    <p class="description">Cable de alimentación estándar para computadoras de escritorio y monitores.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="fuente" data-name="Fuente de poder 500W" data-price="89.90">
+                    <img src="../imaguines/img-productos/fuentes/D_NQ_NP_877422-MPE32067611125_092019-O.webp" alt="Fuente de poder 500W">
+                    <h3 class="product-title">Fuente de poder 500W</h3>
+                    <p class="price">S/. 89.90</p>
+                    <p class="description">Fuente estable para configuraciones básicas y equipos de oficina.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="fuente" data-name="Fuente de poder 600W" data-price="159.90">
+                    <img src="../imaguines/img-productos/fuentes/fuente-cybertel-game.webp" alt="Fuente de poder 600W">
+                    <h3 class="product-title">Fuente de poder 600W</h3>
+                    <p class="price">S/. 159.90</p>
+                    <p class="description">Fuente de poder eficiente y silenciosa para equipos con mayor demanda energética.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="adaptador" data-name="Adaptador Ethernet USB-C" data-price="59.90">
+                    <img src="../imaguines/memoria ran 16gb.webp" alt="Adaptador Ethernet USB-C">
+                    <h3 class="product-title">Adaptador Ethernet USB-C</h3>
+                    <p class="price">S/. 59.90</p>
+                    <p class="description">Conecta laptops sin puerto RJ45 a redes cableadas con mejor estabilidad.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+
+                <article class="product-card" data-category="almacenamiento" data-name="SSD Kingston 240GB" data-price="99.90">
+                    <img src="../imaguines/img-productos/discos/discokinsgston-240.webp" alt="SSD Kingston 240GB">
+                    <h3 class="product-title">SSD Kingston 240GB</h3>
+                    <p class="price">S/. 99.90</p>
+                    <p class="description">Unidad SSD para mejorar velocidad de arranque, carga de programas y rendimiento general.</p>
+                    <button class="btn-product add-to-cart" type="button">Agregar al carrito</button>
+                </article>
+            </div>
+
+            <p id="cart-summary" class="cart-summary" aria-live="polite">Tu carrito está vacío.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 P&amp;R Multimedia | Soporte técnico y accesorios</p>
+    </footer>
+
+    <a id="whatsapp-order" href="https://wa.me/51987965308?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20productos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Enviar pedido por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.478A11.78 11.78 0 0 0 12.006.25C6.027.25 1.03 5.246 1.03 11.224c0 1.978.517 3.912 1.5 5.606L.25 23.75l6.995-1.782a11.91 11.91 0 0 0 3.764.62c5.979 0 10.976-4.996 10.976-10.975 0-3.026-1.18-5.86-3.51-7.235zM12.006 21.25a9.95 9.95 0 0 1-2.7-.366l-.193-.066-4.143 1.056 1.105-3.99-.063-.203A9.94 9.94 0 1 1 12.006 21.25zM17.2 14.6c-.264-.132-1.56-.77-1.803-.858-.243-.087-.42-.132-.597.132-.178.264-.686.858-.84 1.034-.154.178-.307.2-.57.066-.263-.132-1.11-.408-2.113-1.302-.78-.695-1.306-1.553-1.459-1.816-.154-.264-.016-.407.116-.54.119-.118.264-.307.397-.46.132-.154.176-.264.264-.44.088-.177.044-.332-.022-.46-.066-.132-.597-1.44-.821-1.973-.216-.517-.434-.447-.597-.456l-.513-.01c-.177 0-.463.066-.706.332-.243.265-.927.907-.927 2.208s.949 2.565 1.082 2.744c.132.177 1.869 2.86 4.53 3.994 1.029.444 1.829.708 2.456.906.517.164.988.14 1.36.085.414-.06 1.56-.635 1.78-1.249.22-.614.22-1.14.154-1.249-.067-.11-.243-.177-.507-.308z"/>
+        </svg>
+    </a>
+
+    <script src="../productos/filter.js"></script>
+    <script src="../productos/cart.js"></script>
+</body>
+</html>

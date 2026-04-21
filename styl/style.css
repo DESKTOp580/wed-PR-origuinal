@@ -1,0 +1,537 @@
+/* Estilos CSS para el sitio web de P&R Multimedia */
+/* Incluye variables de color, reset, y estilos para header, hero, carrusel, productos, etc. */
+
+:root {
+    /* Variables de color del tema */
+    --sb-bg: #f4f7f8;
+    --sb-surface: #ffffff;
+    --sb-surface-strong: #072033;
+    --sb-text: #0b1220;
+    --sb-text-soft: #52606d;
+    --sb-primary: #00b39a;
+    --sb-primary-700: #008f7b;
+    --sb-accent: #1d5fd0;
+    --sb-accent-700: #15459a;
+    --sb-contrast: #ffffff;
+    --sb-border: rgba(11, 18, 32, 0.08);
+    --sb-shadow: rgba(0, 0, 0, 0.08);
+    --sb-badge: #ff5d5d;
+}
+
+/* Reset y base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--sb-bg);
+    color: var(--sb-text);
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--sb-primary), var(--sb-accent));
+    box-shadow: 0 10px 30px var(--sb-shadow);
+}
+
+.container {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+header .container,
+.header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.logo,
+.logo-link {
+    display: inline-block;
+    color: var(--sb-contrast);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-mark {
+    color: var(--sb-primary);
+    font-weight: 800;
+}
+
+.main-nav {
+    flex: 1;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+}
+
+.nav-menu a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: var(--sb-contrast);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-1px);
+}
+
+/* HERO */
+.hero {
+    min-height: 72vh;
+    padding: 96px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--sb-contrast);
+    background:
+        linear-gradient(135deg, rgba(7, 32, 51, 0.84), rgba(29, 95, 208, 0.72)),
+        url("../imaguines/SL2servicio.jpg") center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-kicker {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.section {
+    padding: 72px 20px;
+}
+
+.section.dark {
+    background: var(--sb-surface-strong);
+    color: var(--sb-contrast);
+}
+
+.section-title,
+.section-title-light {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 3.5vw, 2.4rem);
+    text-align: center;
+}
+
+.section-title-light {
+    color: var(--sb-contrast);
+}
+
+.section-copy,
+.section-copy-light,
+.text-center {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-copy,
+.text-center {
+    color: var(--sb-text-soft);
+}
+
+.section-copy-light {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.section-cta {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.products-container,
+.products-grid {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.product-card,
+.service-card {
+    background: var(--sb-surface);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 36px var(--sb-shadow);
+}
+
+.service-card {
+    height: 100%;
+}
+
+.service-card img,
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+}
+
+.service-card h3,
+.product-card h3 {
+    padding: 18px 20px 0;
+    font-size: 1.2rem;
+}
+
+.service-card p,
+.product-card .description {
+    padding: 12px 20px 20px;
+    color: var(--sb-text-soft);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.price {
+    padding: 12px 20px 0;
+    color: var(--sb-primary-700);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.btn-primary,
+.btn-product,
+.filter-reset,
+.carousel-btn {
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary,
+.btn-product {
+    align-self: flex-start;
+    margin: auto 20px 0;
+    padding: 14px 22px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--sb-primary), var(--sb-accent));
+    color: var(--sb-contrast);
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(0, 179, 154, 0.22);
+}
+
+.btn-primary:hover,
+.btn-product:hover,
+.filter-reset:hover,
+.carousel-btn:hover {
+    transform: translateY(-2px);
+}
+
+.contact-form {
+    width: min(560px, 100%);
+    margin: 28px auto 0;
+    display: grid;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.filter-input,
+.filter-select {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid var(--sb-border);
+    border-radius: 14px;
+    font: inherit;
+    background: var(--sb-surface);
+    color: var(--sb-text);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.filter-input:focus,
+.filter-select:focus {
+    outline: 2px solid rgba(29, 95, 208, 0.18);
+    border-color: var(--sb-accent);
+}
+
+.form-status {
+    min-height: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 48px;
+    padding: 28px 20px;
+    text-align: center;
+    background: #031524;
+    color: var(--sb-contrast);
+}
+
+/* CARRUSEL */
+.carousel {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 14px;
+    align-items: center;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.35s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.carousel-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--sb-surface);
+    color: var(--sb-text);
+    box-shadow: 0 10px 24px var(--sb-shadow);
+}
+
+.carousel-dots {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(11, 18, 32, 0.2);
+    cursor: pointer;
+}
+
+.carousel-dots button.active {
+    background: var(--sb-primary);
+}
+
+.filter-bar {
+    width: min(1100px, 100%);
+    margin: 0 auto 28px;
+    padding: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--sb-primary), var(--sb-accent));
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+}
+
+.filter-input,
+.filter-select {
+    flex: 1 1 220px;
+}
+
+.filter-reset {
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.16);
+    color: var(--sb-contrast);
+    font-weight: 700;
+}
+
+.cart-button {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--sb-primary), var(--sb-accent));
+    color: var(--sb-contrast);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.cart-button-header {
+    position: relative;
+    inset: auto;
+    right: auto;
+    bottom: auto;
+    flex-shrink: 0;
+}
+
+.cart-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: var(--sb-badge);
+    color: var(--sb-contrast);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.cart-summary {
+    width: min(1100px, 100%);
+    margin: 24px auto 0;
+    text-align: center;
+    color: var(--sb-text-soft);
+    font-weight: 700;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    padding: 20px;
+    text-align: center;
+    color: var(--sb-text-soft);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 18px;
+    bottom: 90px;
+    width: 66px;
+    height: 66px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border: 3px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 16px 36px rgba(18, 140, 126, 0.28);
+    z-index: 1000;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--sb-contrast);
+}
+
+@media (max-width: 920px) {
+    header .container,
+    .header-grid {
+        flex-direction: column;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 56px 16px;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 72px 16px;
+    }
+
+    .carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-slide {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+
+    .service-card img,
+    .product-card img {
+        height: 200px;
+    }
+}

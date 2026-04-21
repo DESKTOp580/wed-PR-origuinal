@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- Página principal del sitio web de P&R Multimedia -->
+<!-- Incluye secciones: Hero, Servicios (con carrusel), Productos, Nosotros, Contacto -->
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico y Accesorios | P&R Multimedia</title>
+    <meta name="description" content="P&R Multimedia ofrece soporte técnico, reparación de equipos, redes, cámaras de seguridad y accesorios tecnológicos.">
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styl/style.css">
+</head>
+<body>
+    <!-- HEADER: Navegación principal del sitio -->
+    <header>
+        <div class="container">
+            <h1 class="logo">P&amp;R Multimedia</h1>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="productos/productos.html">Productos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO: Sección de bienvenida con llamada a acción -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="hero-kicker">Soporte técnico confiable para hogares y negocios</p>
+            <h2><span class="brand-mark">P&amp;R</span> Soluciones rápidas para tus equipos y tu red</h2>
+            <p>Diagnóstico, reparación, mantenimiento y venta de accesorios con atención directa por WhatsApp.</p>
+            <a href="#contacto" class="btn-primary">Solicitar servicio</a>
+        </div>
+    </section>
+
+    <!-- SERVICIOS: Sección con carrusel de servicios ofrecidos -->
+    <section id="servicios" class="section">
+        <h2 class="section-title">
+            <span class="brand-mark">P&amp;R</span>
+            <span class="section-title-text">Nuestros Servicios</span>
+        </h2>
+
+        <!-- Carrusel de servicios: Navegable con botones y dots -->
+        <div class="carousel" aria-label="Carrusel de servicios">
+            <button class="carousel-btn prev" type="button" aria-label="Servicio anterior">&lt;</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <article class="service-card">
+                            <img src="imaguines/servicio pcs lapto.png" alt="Reparación de computadoras y laptops">
+                            <h3>Reparación de PCs y laptops</h3>
+                            <p>Diagnóstico, mantenimiento, formateo y reemplazo de componentes.</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <article class="service-card">
+                            <img src="imaguines/camaras.png" alt="Instalación de cámaras de seguridad">
+                            <h3>Instalación de cámaras de seguridad</h3>
+                            <p>Implementación, configuración y soporte para vigilancia residencial o comercial.</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <article class="service-card">
+                            <img src="imaguines/SL3servicio.jpg" alt="Reparación de celulares">
+                            <h3>Reparación de móviles</h3>
+                            <p>Cambio de pantalla, batería y recuperación de datos para smartphones.</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <article class="service-card">
+                            <img src="imaguines/REDES.png" alt="Instalación y configuración de redes">
+                            <h3>Instalación y configuración de redes</h3>
+                            <p>Redes cableadas e inalámbricas con enfoque en estabilidad y seguridad.</p>
+                        </article>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <article class="service-card">
+                            <img src="imaguines/hosting y dominio.png" alt="Planes de hosting y dominios">
+                            <h3>Hosting y dominios</h3>
+                            <p>Asesoría para elegir el plan ideal para tu web, tienda o proyecto digital.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Siguiente servicio">&gt;</button>
+            <div class="carousel-dots" aria-label="Indicadores del carrusel"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS: Muestra productos destacados con enlaces a la página completa -->
+    <section id="productos" class="section dark">
+        <h2 class="section-title-light">Productos destacados</h2>
+        <p class="text-center section-copy-light">
+            Explora una selección de accesorios tecnológicos listos para entrega.
+        </p>
+
+        <div class="products-container">
+            <article class="product-card">
+                <img src="imaguines/img-productos/cables/Cable-de-Impresora-USB.webp" alt="Cable USB para impresora">
+                <h3>Cable USB para impresora</h3>
+                <p class="price">S/. 12.99</p>
+                <p class="description">Cable de alta velocidad para impresoras y periféricos compatibles.</p>
+                <a href="productos/productos.html" class="btn-primary">Ver catálogo</a>
+            </article>
+
+            <article class="product-card">
+                <img src="imaguines/img-productos/fuentes/fuente-cybertel-game.webp" alt="Fuente de poder 600W">
+                <h3>Fuente de poder 600W</h3>
+                <p class="price">S/. 159.90</p>
+                <p class="description">Fuente eficiente y silenciosa para equipos de oficina o gaming.</p>
+                <a href="productos/productos.html" class="btn-primary">Ver catálogo</a>
+            </article>
+
+            <article class="product-card">
+                <img src="imaguines/img-productos/discos/discokinsgston-240.webp" alt="SSD Kingston 240GB">
+                <h3>SSD Kingston 240GB</h3>
+                <p class="price">S/. 99.90</p>
+                <p class="description">Mejora el arranque y la velocidad general de tu computadora.</p>
+                <a href="productos/productos.html" class="btn-primary">Ver catálogo</a>
+            </article>
+        </div>
+
+        <div class="section-cta">
+            <a href="productos/productos.html" class="btn-primary">Ver todos los productos</a>
+        </div>
+    </section>
+
+    <!-- NOSOTROS: Información sobre la empresa -->
+    <section id="nosotros" class="section">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p class="text-center section-copy">
+            En P&R Multimedia brindamos soporte técnico, reparación y venta de accesorios tecnológicos con atención cercana, soluciones prácticas y precios competitivos.
+        </p>
+    </section>
+
+    <!-- CONTACTO: Formulario de contacto y datos -->
+    <section id="contacto" class="section contact-section">
+        <h2 class="section-title">Contacto</h2>
+        <p class="text-center section-copy">
+            ¿Tienes alguna consulta? Escríbenos y te ayudamos por WhatsApp.
+        </p>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label class="sr-only" for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="email">Correo</label>
+                <input id="email" type="email" name="email" placeholder="Tu correo" required>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="asunto">Asunto</label>
+                <input id="asunto" type="text" name="asunto" placeholder="Asunto">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Enviar mensaje</button>
+            <p id="mensaje-estado" class="form-status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- FOOTER: Información de copyright -->
+    <footer>
+        <p>© 2026 P&R Multimedia | Soporte técnico y accesorios</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP: Enlace directo a WhatsApp -->
+    <a href="https://wa.me/51987965308?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Abrir conversación de WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.52 3.478A11.78 11.78 0 0 0 12.006.25C6.027.25 1.03 5.246 1.03 11.224c0 1.978.517 3.912 1.5 5.606L.25 23.75l6.995-1.782a11.91 11.91 0 0 0 3.764.62c5.979 0 10.976-4.996 10.976-10.975 0-3.026-1.18-5.86-3.51-7.235zM12.006 21.25a9.95 9.95 0 0 1-2.7-.366l-.193-.066-4.143 1.056 1.105-3.99-.063-.203A9.94 9.94 0 1 1 12.006 21.25zM17.2 14.6c-.264-.132-1.56-.77-1.803-.858-.243-.087-.42-.132-.597.132-.178.264-.686.858-.84 1.034-.154.178-.307.2-.57.066-.263-.132-1.11-.408-2.113-1.302-.78-.695-1.306-1.553-1.459-1.816-.154-.264-.016-.407.116-.54.119-.118.264-.307.397-.46.132-.154.176-.264.264-.44.088-.177.044-.332-.022-.46-.066-.132-.597-1.44-.821-1.973-.216-.517-.434-.447-.597-.456l-.513-.01c-.177 0-.463.066-.706.332-.243.265-.927.907-.927 2.208s.949 2.565 1.082 2.744c.132.177 1.869 2.86 4.53 3.994 1.029.444 1.829.708 2.456.906.517.164.988.14 1.36.085.414-.06 1.56-.635 1.78-1.249.22-.614.22-1.14.154-1.249-.067-.11-.243-.177-.507-.308z"/>
+        </svg>
+    </a>
+
+    <!-- BOTÓN DEL CARRITO: Muestra el número de items -->
+    <button id="cart-button" class="cart-button" type="button" aria-label="Carrito">
+        <span class="cart-icon">🛒</span>
+        <span id="cart-count" class="cart-badge" aria-hidden="true">0</span>
+    </button>
+
+    <!-- SCRIPTS: JavaScript para funcionalidad del sitio -->
+    <script src="assets/js/main.js"></script> <!-- Manejo del formulario de contacto -->
+    <script src="assets/js/carousel.js" defer></script> <!-- Control del carrusel de servicios -->
+    <script src="assets/js/cart-badge.js" defer></script> <!-- Actualización del badge del carrito -->
+</body>
+</html>
+
+/**
+ * Script para controlar el carrusel de servicios con autoplay infinito.
+ * Características:
+ * - Movimiento automático cada 4 segundos
+ * - Pausa al hacer hover
+ * - Navegación con botones y dots
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const prevBtn = carousel.querySelector(".carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".carousel-btn.next");
+    const dotsContainer = carousel.querySelector(".carousel-dots");
+
+    let currentIndex = 0;
+    let autoplayInterval = null;
+    const AUTOPLAY_DELAY = 4000; // 4 segundos
+
+    /**
+     * Actualiza la posición del carrusel.
+     */
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        Array.from(dotsContainer.children).forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    /**
+     * Navega a un slide específico.
+     */
+    function goToSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        updateCarousel();
+        resetAutoplay();
+    }
+
+    /**
+     * Inicia el autoplay automático.
+     */
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }, AUTOPLAY_DELAY);
+    }
+
+    /**
+     * Detiene y reinicia el autoplay.
+     */
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+
+    // Crear dots para cada slide
+    slides.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Ir al servicio ${index + 1}`);
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    // Event listeners para botones prev/next
+    if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+
+    // Pausar autoplay en hover y reanudar al salir
+    carousel.addEventListener("mouseenter", () => clearInterval(autoplayInterval));
+    carousel.addEventListener("mouseleave", () => startAutoplay());
+
+    // Inicializar
+    updateCarousel();
+    startAutoplay();
+});
