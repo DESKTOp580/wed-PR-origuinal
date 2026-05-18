@@ -1,0 +1,79 @@
+* Script para controlar el carrusel de servicios con autoplay infinito.
+ * Características:
+ * - Movimiento automático cada 4 segundos
+ * - Pausa al hacer hover
+ * - Navegación con botones y dots
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) return;
+
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const prevBtn = carousel.querySelector(".carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".carousel-btn.next");
+    const dotsContainer = carousel.querySelector(".carousel-dots");
+
+    let currentIndex = 0;
+    let autoplayInterval = null;
+    const AUTOPLAY_DELAY = 4000; // 4 segundos
+
+    /**
+     * Actualiza la posición del carrusel.
+     */
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        Array.from(dotsContainer.children).forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    /**
+     * Navega a un slide específico.
+     */
+    function goToSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        updateCarousel();
+        resetAutoplay();
+    }
+
+    /**
+     * Inicia el autoplay automático.
+     */
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }, AUTOPLAY_DELAY);
+    }
+
+    /**
+     * Detiene y reinicia el autoplay.
+     */
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+
+    // Crear dots para cada slide
+    slides.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Ir al servicio ${index + 1}`);
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    // Event listeners para botones prev/next
+    if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+
+    // Pausar autoplay en hover y reanudar al salir
+    carousel.addEventListener("mouseenter", () => clearInterval(autoplayInterval));
+    carousel.addEventListener("mouseleave", () => startAutoplay());
+
+    // Inicializar
+    updateCarousel();
+    startAutoplay();
+});
